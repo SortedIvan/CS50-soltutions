@@ -1,5 +1,5 @@
 #import <stdio.h>
 
 int main(void){
-    printf("hello, world\n");
+    printf("hello, CS50\n");
 }
