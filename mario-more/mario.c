@@ -66,8 +66,15 @@ void marioHard(void)
     }
     while (height < 0);
 
-    for(int row = 0; row < height; row++)
+    for(int row = 1; row < height; row++)
     {
-        // right side of mario
+        for (int k = height - row; k > 0; k--){
+            printf(".");
+        }
+
+        for (int j = row; row > 0; row--){
+            printf("#");
+        }
+        printf("\n");
     }
 }
