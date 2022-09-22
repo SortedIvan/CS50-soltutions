@@ -40,9 +40,9 @@ void marioLeft(void)
     }
     while (height < 0);
 
-    for (int i = 0; i < height; i++)
+    for (int i = 1; i < height; i++)
     {
-        for (int j = i; j > 0; j--){
+        for (int j = height - i; j > 0; j--){
             printf(".");
         }
         for (int k = 0; k < i; k++){
