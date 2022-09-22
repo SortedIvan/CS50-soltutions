@@ -1,10 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void marioLeft(void);
+
 int main(void)
 {
 
-
+    marioLeft();
 
 }
 
@@ -34,8 +36,8 @@ void marioLeft(void){
     while(height < 0);
 
     for (int i = 0; i < height; i++){
-        for (int j = 0; j < height; j++){
-            
+        for (int j = 0; j < i; j++){
+            printf(" ");
         }
     }
 
