@@ -10,7 +10,13 @@ int main(void)
     while(height < 0);
 
     for (int i = 0; i < height; i++){
-        
+        int count = i;
+
+        while (count >= 0){
+            printf("#");
+            count--;
+        }
+        printf("\n");
     }
 
 
