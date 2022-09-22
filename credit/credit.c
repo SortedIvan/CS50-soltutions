@@ -9,6 +9,7 @@ int main(void)
 bool validateCreditCard()
 {
     long credit = get_long("Enter your credit card nr: ");
+
     
 
 }
