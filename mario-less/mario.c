@@ -42,7 +42,7 @@ void marioLeft(void)
 
     for (int i = 0; i < height; i++)
     {
-        for (int j = height; j > 0; j--){
+        for (int j = i; j > 0; j--){
             printf(".");
         }
         for (int k = 0; k < i; k++){
