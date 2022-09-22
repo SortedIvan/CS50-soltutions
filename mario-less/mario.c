@@ -10,7 +10,8 @@ int main(void)
 
 }
 
-void marioRight(void){
+void marioRight(void)
+{
     int height = -1;
     do
     {
@@ -43,7 +44,7 @@ void marioLeft(void)
     for (int i = 0; i < height; i++)
     {
         int nrOfDots = height - i;
-        int nrOfHashes = 
+        int nrOfHashes =
         printf("\n");
     }
 
