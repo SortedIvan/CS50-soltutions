@@ -35,9 +35,5 @@ void marioLeft(void){
     }
     while(height < 0);
 
-    for (int i = 0; i < height; i++){
-        for (int j = height; j > 0; j--){
-            
-        }
-    }
+    for
 }
