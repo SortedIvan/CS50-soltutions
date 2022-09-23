@@ -14,14 +14,14 @@ bool validateCreditCard()
     int sum = 0;
     while (credit > 0)  // for each odd digit
     {
-        int digit = credit % 10;
-        printf("%i\n", digit);
+        long digit = credit % 10;
+        printf("%ld\n", digit);
         sum += digit;
         credit /= 10;
 
-        int digit2 = credit % 10;
-        if (digit > 9){
-            digit = digit - 9;
+        long digit2 = credit % 10;
+        if (digit2 > 9){
+            digit2 = digit2 - 9;
         }
         sum+= digit2;
         credit /= 10;
