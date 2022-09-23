@@ -16,9 +16,6 @@ bool validateCreditCard()
     credit /= 10;               // throw away the least significant digit
     while (credit > 0)  // for each odd digit
     {
-
-        int digit2 = credit % 2;
-        printf("%i\n", digit2);
         int digit = credit % 10;
 
         if (digit > 9){
@@ -26,7 +23,10 @@ bool validateCreditCard()
         }
 
         sum += digit;
-        credit /= 100;
+        credit /= 10;
+        int digit2 = credit % 10;
+        sum+= digit2;
+        credit /= 10;
     }
     printf("%i\n", sum);
     return true;
