@@ -5,7 +5,12 @@ bool validateCreditCard();
 
 int main(void)
 {
-    validateCreditCard();
+    if (validateCreditCard()){
+        printf("Credit card is valid!\n");
+        return 1;
+    }
+    printf("Try again!\n");
+    return 0;
 }
 
 bool validateCreditCard()
@@ -15,28 +20,22 @@ bool validateCreditCard()
     while (credit > 0)  // for each odd digit
     {
         long digit = credit % 10;
-        printf("%ld\n", digit);
         sum += digit;
         credit /= 10;
 
         long digit2 = credit % 10;
+        digit2 *= 2;
         if (digit2 > 9){
             digit2 = digit2 - 9;
         }
+
         sum+= digit2;
         credit /= 10;
     }
-    printf("%i\n", sum);
-    return true;
+
+    if (sum % 10 == 0) {
+        return true;
+    }
+    return false;
 
 }
-
-        // int n, reverse=0, rem;
-        // printf("Enter a number: ");
-        // scanf("%d", &n);
-        // while(n!=0)
-        // {
-        //     rem=n%10;
-        //     reverse=reverse*10+rem;
-        //     n/=10;
-        // }
