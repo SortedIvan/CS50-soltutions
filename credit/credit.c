@@ -16,12 +16,15 @@ bool validateCreditCard()
     {
         int digit = credit % 10;
         printf("%i\n", digit);
+        sum += digit;
+        credit /= 10;
+
+        int digit2 = credit % 10;
         if (digit > 9){
             digit = digit - 9;
         }
-
-        sum += digit;
-        credit /= 100;
+        sum+= digit2;
+        credit /= 10;
     }
     printf("%i\n", sum);
     return true;
