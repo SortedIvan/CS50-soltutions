@@ -12,8 +12,6 @@ bool validateCreditCard()
 {
     long credit = get_long("Enter your credit card nr: ");
     int sum = 0;
-
-    credit /= 10;               // throw away the least significant digit
     while (credit > 0)  // for each odd digit
     {
         int digit = credit % 10;
