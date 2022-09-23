@@ -16,7 +16,9 @@ bool validateCreditCard()
         int digit = value % 10;
         digit = digit * 2;
 
-        if (digit )
+        if (digit > 9){
+            digit 
+        }
 
         value /= 10;
     }
