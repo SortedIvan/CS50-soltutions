@@ -23,7 +23,7 @@ bool validateCreditCard()
         }
 
         sum += digit;
-        credit /= 100;          // throw away two digits
+        credit /= 100;
     }
     printf("%i", sum);
     return true;
