@@ -25,7 +25,7 @@ bool validateCreditCard()
         sum += digit;
         credit /= 100;
     }
-    printf("%i", sum);
+    printf("%i\n", sum);
     return true;
 
 }
