@@ -17,18 +17,25 @@ bool validateCreditCard()
     while (credit > 0)  // for each odd digit
     {
         int digit = credit % 10;
-
+        printf("%i\n", digit);
         if (digit > 9){
             digit = digit - 9;
         }
 
         sum += digit;
-        credit /= 10;
-        int digit2 = credit % 10;
-        sum+= digit2;
-        credit /= 10;
+        credit /= 100;
     }
     printf("%i\n", sum);
     return true;
 
 }
+
+        // int n, reverse=0, rem;
+        // printf("Enter a number: ");
+        // scanf("%d", &n);
+        // while(n!=0)
+        // {
+        //     rem=n%10;
+        //     reverse=reverse*10+rem;
+        //     n/=10;
+        // }
