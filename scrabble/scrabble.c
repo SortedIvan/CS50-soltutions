@@ -31,11 +31,13 @@ int compute_score(string word)
     }
 
     for (int i = 0; i < word_length; i++){
+        // Checks whether there are any special characters and ignores them
         if((int)word[i] < 64 || (int)word[i] > 90){
             continue;
         }
 
         
+
     }
     return word_length;
     // 64 - A
