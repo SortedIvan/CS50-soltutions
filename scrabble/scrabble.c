@@ -23,5 +23,22 @@ int main(void)
 
 int compute_score(string word)
 {
-    
+
+    int word_length = 0;
+
+    while (word[word_length] != '\0'){
+        word_length++;
+    }
+
+    for (int i = 0; i < wordLength; i++){
+        if((int)word[i] < 64 || (int)word[i] > 90){
+            continue;
+        }
+
+        
+    }
+
+    // 64 - A
+    // 90 - Z
+
 }
