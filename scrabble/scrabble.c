@@ -18,6 +18,9 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
+    printf("%i", score1);
+    printf("%i", score2);
+
     // TODO: Print the winner
 }
 
@@ -25,6 +28,7 @@ int compute_score(string word)
 {
 
     int word_length = 0;
+    int score = 0;
 
     while (word[word_length] != '\0'){
         word_length++;
@@ -36,10 +40,12 @@ int compute_score(string word)
             continue;
         }
 
-        
+        // 'D' - 'A' = D points 68 - 64 4 ( minus 1)
+
+        score += POINTS[(int)word[i] - 65];
 
     }
-    return word_length;
+    return score;
     // 64 - A
     // 90 - Z
 
