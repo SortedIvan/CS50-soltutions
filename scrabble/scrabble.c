@@ -36,7 +36,7 @@ int compute_score(string word)
             continue;
         }
 
-        'A = 26
+        
 
     }
     return word_length;
