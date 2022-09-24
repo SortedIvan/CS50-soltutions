@@ -34,6 +34,8 @@ int compute_score(string word)
         if((int)word[i] < 64 || (int)word[i] > 90){
             continue;
         }
+
+        
     }
     return word_length;
     // 64 - A
