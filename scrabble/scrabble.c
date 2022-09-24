@@ -40,8 +40,8 @@ int compute_score(string word)
             continue;
         }
 
-        if(isupper(word[i])){
-            word[i] = tolower(word[i]);
+        if(islower(word[i])){
+            word[i] = toupper(word[i]);
         }
 
         // 'D' - 'A' = D points 68 - 64 4 ( minus 1)
