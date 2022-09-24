@@ -30,14 +30,12 @@ int compute_score(string word)
         word_length++;
     }
 
-    for (int i = 0; i < wordLength; i++){
+    for (int i = 0; i < word_length; i++){
         if((int)word[i] < 64 || (int)word[i] > 90){
             continue;
         }
-
-        
     }
-
+    return word_length;
     // 64 - A
     // 90 - Z
 
