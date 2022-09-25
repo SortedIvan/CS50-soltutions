@@ -5,7 +5,7 @@ int TestFormula(string input, int key);
 
 int main(int argc, string argv[])
 {
-    printf("ye: %i", TestFormula(argv[0], argc));
+    printf("ye: %i\n", TestFormula(argv[0], argc));
 }
 
 int TestFormula(string input, int key){
