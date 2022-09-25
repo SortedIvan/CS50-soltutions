@@ -3,5 +3,9 @@
 
 int main(int argc, string argv[])
 {
+
+}
+
+void cypherText(){
     
 }
