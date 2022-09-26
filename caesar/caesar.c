@@ -23,11 +23,12 @@ int main(int argc, string argv[]) // int argc, string argv[]
         printf("Usage: ./caesar {key}\n");
         return 1;
     }
-    long key = (long)argv[1];
+    int key = (int)strtol(argv[1], (char **)NULL, 10);
     string message = get_string("Provide a word to encrypt: ");
     for (int i = 0; i < get_string_length(message); i++)
     {
-        char encrypted_char = ((int)message[i] + key) % 26;
+        int encrypted_char = ((int)message[i] + key) % 26;
+        printf("This is encr: %i", encrypted_char);
         message[i] = encrypted_char;
     }
     for (int i = 0; i < get_string_length(message); i++){
