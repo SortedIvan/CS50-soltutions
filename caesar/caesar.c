@@ -9,9 +9,11 @@
 // - k is the key
 
 bool only_digits(string message);
+int get_string_length(string message);
 
 int main(int argc, string argv[]) // int argc, string argv[]
 {
+
     if (argc != 2){
         printf("Usage: ./caesar {key}\n");
         return 1;
@@ -23,11 +25,21 @@ int main(int argc, string argv[]) // int argc, string argv[]
     }
 
     string message = get_string("Provide a word to encrypt: ");
-    //printf("%s", only_digits(message) ? "Correct key\n" : "Usage: ./caesar {key}\n");
+    string encrypted_message = "";
+    for (i = 0; i < get_string_length(argv[message]; i++))
+    {
+        
+    }
 }
 
-
-
+int get_string_length(string message){
+    int k = 0;
+    while (message[k] != '\0') // Simple way to count the characters in message
+    {
+        k++;
+    }
+    return k;
+}
 // Function to chech whether a message consists of numbers or a string
 bool only_digits(string message)
 {
