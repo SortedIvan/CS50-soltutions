@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     // - ci is the encrypted character
     // - k is the key
 
-
-
-
 }
+
+
+bool only_digits(string )
