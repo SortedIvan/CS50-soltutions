@@ -30,7 +30,6 @@ int main(int argc, string argv[]) // int argc, string argv[]
         char encrypted_char = ((int)message[i] + key) % 26;
         message[i] = encrypted_char;
     }
-
     for (int i = 0; i < get_string_length(message); i++){
         printf("%c", message[i]);
     }
