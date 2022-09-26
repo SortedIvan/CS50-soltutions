@@ -22,7 +22,7 @@ int main(int argc, string argv[]) // int argc, string argv[]
         return 1;
     }
 
-    string message = get_string("Provide a key: ");
+    string message = get_string("Provide a word to encrypt: ");
     //printf("%s", only_digits(message) ? "Correct key\n" : "Usage: ./caesar {key}\n");
 }
 
