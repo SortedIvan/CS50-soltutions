@@ -21,9 +21,7 @@ int main(int argc, string argv[]) // int argc, string argv[]
     }
 
     string message = get_string("Provide a key: ");
-    bool correctKey = false;
-
-    printf("%s", only_digits(message) ? "Correct key" : "Usage: ./caesar {key}");
+    printf("%s", only_digits(message) ? "Correct key\n" : "Usage: ./caesar {key}\n");
 }
 
 
