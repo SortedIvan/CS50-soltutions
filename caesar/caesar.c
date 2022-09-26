@@ -34,6 +34,7 @@ int main(int argc, string argv[]) // int argc, string argv[]
     for (int i = 0; i < get_string_length(message); i++){
         printf("%c", message[i]);
     }
+    printf("hello");
     return 0;
 }
 
