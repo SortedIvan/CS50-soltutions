@@ -14,12 +14,7 @@ int main() // int argc, string argv[]
 {
     string message = get_string("Provide a key: ");
     bool correctKey = false;
-
-    while (!correctKey)
-    {
-        printf()
-    }
-
+    
     printf("%s", only_digits(message) ? "Correct key" : "Usage: ./caesar {key}");
 }
 
