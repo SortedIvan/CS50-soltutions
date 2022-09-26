@@ -31,7 +31,10 @@ int main(int argc, string argv[]) // int argc, string argv[]
         message[i] = encrypted_char;
     }
 
-    printf("Encrypted word: %s", str_message);
+    for (int i = 0; i < get_string_length(message); i++){
+        printf("%c", message[i]);
+    }
+    return 0;
 }
 
 int get_string_length(string message){
