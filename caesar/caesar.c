@@ -28,8 +28,10 @@ int main(int argc, string argv[]) // int argc, string argv[]
     for (int i = 0; i < get_string_length(message); i++)
     {
         int encrypted_char = ((int)message[i] + key) % 26;
-        printf("This is encr: %i", encrypted_char);
-        message[i] = encrypted_char;
+        printf("Message[i]\n: %i", (int)message[i]);
+        printf("This is: %i\n", encrypted_char);
+        printf("This is encr: %c\n", (char)encrypted_char);
+        message[i] = (char)encrypted_char;
     }
     for (int i = 0; i < get_string_length(message); i++){
         printf("%c", message[i]);
