@@ -12,13 +12,10 @@ bool only_digits(string message);
 
 int main(int argc, string argv[]) // int argc, string argv[]
 {
-    if (argc != 2){
-        return 1;
-    }
-    else if (!only_digits(argv[1]))
-    {
-        return 1;
-    }
+    // if (argc != 2 && !only_digits(argv[1])){
+    //     printf("Usage: ./caesar {key}\n");
+    //     return 1;
+    // }
 
     string message = get_string("Provide a key: ");
     printf("%s", only_digits(message) ? "Correct key\n" : "Usage: ./caesar {key}\n");
