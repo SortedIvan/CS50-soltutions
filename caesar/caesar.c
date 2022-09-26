@@ -16,4 +16,18 @@ int main(int argc, string argv[])
 }
 
 
-bool only_digits(string )
+bool only_digits(string message)
+{
+
+    int k = 0;
+    while (message[k] != '\0') // Simple way to count the characters in message
+    {
+        k++;
+    }
+
+    for (int i = 0; i < k; i++)
+    {
+        if (message[i] )
+    }
+
+}
