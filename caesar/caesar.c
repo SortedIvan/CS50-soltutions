@@ -13,7 +13,14 @@ bool only_digits(string message);
 int main() // int argc, string argv[]
 {
     string message = get_string("Provide a key: ");
-    printf("%s", only_digits(message) ? "" : "false");
+    bool correctKey = false;
+
+    while (!correctKey)
+    {
+        printf()
+    }
+
+    printf("%s", only_digits(message) ? "Correct key" : "Usage: ./caesar {key}");
 }
 
 
