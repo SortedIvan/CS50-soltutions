@@ -53,10 +53,10 @@ string encrypt_message(int key, string message, int length){
       // key = 40
       // ci = (pi + key) % 26
         int char_value = (int)message[i];
-        if (char_value >= 65 && char_value <= 90)
+        if (char_value >= 65 && char_value <= 90) // CAPITALS
         {
             int cipher_key = (int)message[i] - (int)'A';
-            int cipher_formula = (cipher_key + key) % 26;
+            int cipher_formula = (cipher_key + key) % 26; 
             message[i] = (char)(cipher_formula + (int)'A');
         }
         else if(char_value >= 97 && char_value <= 122)
