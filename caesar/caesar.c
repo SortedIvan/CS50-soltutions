@@ -26,6 +26,8 @@ int main(int argc, string argv[]) // int argc, string argv[]
     int key = (int)strtol(argv[1], (char **)NULL, 10);
     string message = get_string("Provide a word to encrypt: ");
 
+    
+
 
 
     return 0;
