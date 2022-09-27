@@ -36,6 +36,7 @@ int main(int argc, string argv[]) // int argc, string argv[]
     for (int i = 0; i < length; i++)
     {
         int cipher_key = (int)message[i] - (int)'A';
+        printf("%i", cipher_key);
         message[i] = (char)(cipher_key + (int)'A');
         printf("%c", message[i]);
     }
