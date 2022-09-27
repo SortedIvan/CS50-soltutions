@@ -49,7 +49,9 @@ int main(int argc, string argv[]) // int argc, string argv[]
 
 string encrypt_message(int key, string message, int length){
     for (int i = 0; i < length; i++)
-    {
+    { // E - 69
+      // key = 40
+      // ci = (pi + key) % 26
         int char_value = (int)message[i];
         if (char_value >= 65 && char_value <= 90)
         {
