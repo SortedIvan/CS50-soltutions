@@ -26,9 +26,19 @@ int main(int argc, string argv[]) // int argc, string argv[]
     int key = (int)strtol(argv[1], (char **)NULL, 10);
     string message = get_string("Provide a word to encrypt: ");
 
-    
+    // (int)'A' so we get its ASCII value
+    // (p[i] - get its ascii value) - (int)'A'
+    // ci = (p[i] + key) % 26
+    // ci + 'A' = new place of the ciphered char
 
+    int length = get_string_length(message);
 
+    for (int i = 0; i < length; i++)
+    {
+        int cipher_key = (int)message[i] - (int)'A';
+        message[i] = (char)(cipher_key + (int)'A');
+        printf("%c", message[i]);
+    }
 
     return 0;
 }
