@@ -10,6 +10,7 @@
 
 bool only_digits(string message);
 int get_string_length(string message);
+string encrypt_message(int key, string message, int length);
 
 int main(int argc, string argv[]) // int argc, string argv[]
 {
@@ -32,17 +33,41 @@ int main(int argc, string argv[]) // int argc, string argv[]
     // ci + 'A' = new place of the ciphered char
 
     int length = get_string_length(message);
+    string encrypted_message = encrypt_message(key, message, length); // Looping through each character, getting its value and using the formula
 
+    // Loop to printout every character in the message;
+    printf("cipher text: ");
     for (int i = 0; i < length; i++)
     {
-        int cipher_key = (int)message[i] - (int)'A';
-        printf("%i", cipher_key);
-        message[i] = (char)(cipher_key + (int)'A');
-        printf("%c", message[i]);
+        printf("%c", encrypted_message[i]);
     }
 
+    printf("\n");
     return 0;
 }
+
+
+string encrypt_message(int key, string message, int length){
+    for (int i = 0; i < length; i++)
+    {
+        int char_value = (int)message[i];
+        if (char_value >= 65 && char_value <= 90)
+        {
+            int cipher_key = (int)message[i] - (int)'A';
+            int cipher_formula = (cipher_key + key) % 26;
+            message[i] = (char)(cipher_formula + (int)'A');
+        }
+        else if(char_value >= 97 && char_value <= 122)
+        {
+            int cipher_key = (int)message[i] - (int)'a';
+            int cipher_formula = (cipher_key + key) % 26;
+            message[i] = (char)(cipher_formula + (int)'a');
+        }
+    }
+    return message;
+}
+
+
 
 int get_string_length(string message){
     int k = 0;
