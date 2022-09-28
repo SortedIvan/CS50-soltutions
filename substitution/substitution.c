@@ -23,9 +23,15 @@ int main(int argc, string argv[])
 
 string encrypt_message(string message, string key)
 {
-    for(int i = 0; i < get_string_len(key); i++)
+    for(int i = 0; i < get_string_len(message); i++)
     {
+        for(int k = 0; k < get_string_len(key); k++)
+        {
+            
+
         //NQXPOMAFTRHLZGECYJIUWSKDVB - key[i] = N
+        // takes message[i] where it would usually sit in a normal alph order = key[i]
+        }
     }
 }
 
