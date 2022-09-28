@@ -1,9 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
 
 
 string encrypt_message(string message, string key);
 int get_string_len(string string_message);
+string decapitalize_message(string message);
 
 int main(int argc, string argv[])
 {
@@ -45,6 +47,7 @@ string encrypt_message(string message, string key)
         {
             int alphabetic_pos = (int)message[i] - (int)'a';
             message[i] = key[alphabetic_pos];
+            message[i] = tolower(message[i]);
         }
 
     }
@@ -59,4 +62,13 @@ int get_string_len(string string_message)
         i++;
     }
     return i;
+}
+
+string decapitalize_message(string message)
+{
+    for (int i = 0; i < get_string_len(message); i++)
+    {
+        message[i] = tolower(message[i]);
+    }
+    return message;
 }
