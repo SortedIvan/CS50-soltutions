@@ -3,6 +3,7 @@
 
 
 string encrypt_message(string message, string key);
+int get_string_len(string string_message);
 
 int main(int argc, string argv[])
 {
