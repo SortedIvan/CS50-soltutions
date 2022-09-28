@@ -38,8 +38,13 @@ string encrypt_message(string message, string key)
     {
         if (message[i] >= 65 && message[i] <= 90)
         {
-    int alphabetic_pos = (int)message[i] - (int)'A';
-    message[i] = key[alphabetic_pos];
+            int alphabetic_pos = (int)message[i] - (int)'A';
+            message[i] = key[alphabetic_pos];
+        }
+        else if (message[i] >= 97 && message[i] <= 122)
+        {
+            int alphabetic_pos = (int)message[i] - (int)'a';
+            message[i] = key[alphabetic_pos];
         }
 
     }
