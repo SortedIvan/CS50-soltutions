@@ -23,6 +23,18 @@ int main(int argc, string argv[])
 
 string encrypt_message(string message, string key)
 {
-    
+    for(int i = 0; i < get_string_len(key); i++)
+    {
+        //NQXPOMAFTRHLZGECYJIUWSKDVB - key[i] = N
+    }
 }
 
+int get_string_len(string string_message)
+{
+    int i = 0;
+    while (string_message[i] != '\0')
+    {
+        i++;
+    }
+    return i;
+}
