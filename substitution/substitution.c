@@ -25,18 +25,23 @@ int main(int argc, string argv[])
     }
     printf("\n");
 
+    // ASCII VALUES
     // A - 65
     // Z - 90
+    // a - 97
+    // z - 122
 }
 
 string encrypt_message(string message, string key)
 {
     for(int i = 0; i < get_string_len(message); i++)
     {
-        int alphabetic_pos = (int)message[i] - (int)'A';
-        message[i] = key[alphabetic_pos];
-        //NQXPOMAFTRHLZGECYJIUWSKDVB - key[i] = N
-        // takes message[i] where it would usually sit in a normal alph order = key[i]
+        if (message[i] >= 65 && message[i] <= 90)
+        {
+    int alphabetic_pos = (int)message[i] - (int)'A';
+    message[i] = key[alphabetic_pos];
+        }
+
     }
     return message;
 }
