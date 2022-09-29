@@ -11,9 +11,12 @@ int main()
 
 void draw_stairs(int height)
 {
-    for (int i = 0; i < height; i++)
+
+    draw_stairs(height - 1);
+
+    for (int i = 0; i < height - 1; i++)
     {
         printf("#");
     }
-    draw_stairs(height - 1);
+    printf("\n");
 }
