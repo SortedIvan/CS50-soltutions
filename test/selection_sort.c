@@ -37,7 +37,7 @@ void sort_array(int unsorted_array[], int length)
 
     while (counter < length)
     {
-        for(int i = 1; i < length - 1; i++)
+        for(int i = 0; i < length; i++)
         {
             printf("%i", unsorted_array[i]);
             if (unsorted_array[i] < smallest_nr)
