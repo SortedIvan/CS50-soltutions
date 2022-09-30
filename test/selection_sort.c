@@ -24,5 +24,7 @@ void sort_array(int unsorted_array[], int length)
                 smallest_nr = sorted_array[i];
             }
         }
+
+        sorted_array[0] = 
     }
 }
