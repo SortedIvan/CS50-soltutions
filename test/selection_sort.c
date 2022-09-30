@@ -18,12 +18,14 @@ int main()
     }
 
     // Printing unsorted array
+    printf("unsorted array: ");
     for (int i = 0; i < length; i++)
     {
         printf(" %i, ", unsorted_array[i]);
     }
     printf("\n");
 
+    sort_array(unsorted_array, length);
 
 }
 
@@ -33,12 +35,9 @@ void sort_array(int unsorted_array[], int length)
     int sorted_array[length];
     int counter = 0;
 
-
-
-
-    while (counter <= length)
+    while (counter < length)
     {
-        for(int i = 0; i < length; i++)
+        for(int i = 1; i < length - 1; i++)
         {
             if (sorted_array[i] < smallest_nr)
             {
