@@ -9,10 +9,5 @@ int main()
 
 void sort_array(int unsorted_array[])
 {
-
-}
-
-int get_array_size(int some_array[])
-{
-
+    int size = sizeof unsorted_array / sizeof unsorted_array[0];
 }
