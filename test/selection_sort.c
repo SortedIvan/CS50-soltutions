@@ -39,14 +39,15 @@ void sort_array(int unsorted_array[], int length)
     {
         for(int i = 1; i < length - 1; i++)
         {
-            printf("%i", sorted_array[i]);
+            printf("%i", unsorted_array[i]);
             if (unsorted_array[i] < smallest_nr)
             {
-                smallest_nr = sorted_array[i];
+                smallest_nr = unsorted_array[i];
             }
         }
 
         sorted_array[counter] = smallest_nr;
+        smallest_nr = 0;
         counter++;
     }
     for (int i = 0; i < length; i++)
