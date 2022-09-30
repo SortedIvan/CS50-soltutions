@@ -5,7 +5,10 @@ void sort_array(int unsorted_array[], int length);
 
 int main()
 {
+
     int length = get_int("Provide array size:" );
+    int unsorted_array[length];
+    sort_array(int unsorted_array[], int length)
 
 }
 
@@ -25,6 +28,12 @@ void sort_array(int unsorted_array[], int length)
             }
         }
 
-        sorted_array[0] = 
+        sorted_array[counter] = smallest_nr;
+        counter++;
     }
+    for (int i = 0; i < length; i++)
+    {
+        printf("%i", sorted_array[i]);
+    }
+    printf("\n");
 }
