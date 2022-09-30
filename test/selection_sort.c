@@ -3,7 +3,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define randnum(min, max) \ ((rand() % (int)(((max) + 1) - (min))) + (min))
 void sort_array(int unsorted_array[], int length);
 
 int main()
@@ -12,16 +11,16 @@ int main()
     int length = get_int("Provide array size:" );
     int unsorted_array[length];
 
-    // Populating array
+    // Populating array with values between 1 and 19
     for (int i = 0; i < length; i++)
     {
-        unsorted_array[i] = randnum(1,50);
+        unsorted_array[i] = rand() % 20;
     }
 
     // Printing unsorted array
     for (int i = 0; i < length; i++)
     {
-        printf("%i", unsorted_array[i]);
+        printf(" %i, ", unsorted_array[i]);
     }
     printf("\n");
 
