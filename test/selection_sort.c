@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 
-void sort_array(int[] unsorted_array);
+void sort_array(int unsorted_array[]);
 
 int main()
 {
     return 0;
 }
 
-void sort_array(int[] unsorted_array)
+void sort_array(int unsorted_array[])
 {
-
+    
 }
