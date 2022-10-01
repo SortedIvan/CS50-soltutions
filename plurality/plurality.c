@@ -94,7 +94,10 @@ void print_winner(void)
 
     // FIRST SORT THEM
 
-    
+    for (int i = 0; i < candidate_count - 1; i++)
+    {
+        if ()
+    }
 
 
     return;
