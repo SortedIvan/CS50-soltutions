@@ -105,9 +105,8 @@ void print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("%i", candidates[i].votes);
+        if (i < )
     }
-    printf("\n");
 
 
     return;
