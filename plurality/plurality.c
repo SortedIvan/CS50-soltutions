@@ -105,7 +105,7 @@ void print_winner(void)
     }
 
     candidate winner = candidates[0];
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (winner.votes < candidates[i].votes)
         {
