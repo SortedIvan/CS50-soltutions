@@ -98,9 +98,9 @@ void print_winner(void)
 
     while (i > 1 && !sorted)
     {
+        sorted = true;
         for (int i = 0; i < candidate_count - 1; i++)
         {
-            sorted = true;
             if (candidates[i+1].votes > )
         }
     }
