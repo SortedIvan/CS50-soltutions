@@ -83,7 +83,7 @@ bool vote(string name)
 void print_winner(void)
 {
     int biggest_vote = candidates[0].votes;
-    
+
     for (int i = 0; i < candidate_count; i++)
     {
         if(candidates[i].votes > biggest_vote)
@@ -91,5 +91,11 @@ void print_winner(void)
             biggest_vote = candidates[i].votes;
         }
     }
+
+    // FIRST SORT THEM
+
+    
+
+
     return;
 }
