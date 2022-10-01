@@ -120,6 +120,8 @@ void print_winner(void)
         printf("%c", winner.name[i]);
     }
 
+    printf("%candidate", winner);
+
     printf(" is the winner with: %i votes", winner.votes);
     return;
 }
