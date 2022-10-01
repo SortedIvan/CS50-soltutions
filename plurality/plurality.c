@@ -93,11 +93,18 @@ void print_winner(void)
     }
 
     // FIRST SORT THEM
+    bool sorted = false;
+    int i = candidate_count;
 
-    for (int i = 0; i < candidate_count - 1; i++)
+    while (i > 1 && !sorted)
     {
-        if ()
+        for (int i = 0; i < candidate_count - 1; i++)
+        {
+            sorted = true;
+            if (candidates[i+1].votes > )
+        }
     }
+
 
 
     return;
