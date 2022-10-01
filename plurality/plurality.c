@@ -22,6 +22,7 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
+int get_str_len(string name);
 
 int main(int argc, string argv[])
 {
@@ -112,11 +113,18 @@ void print_winner(void)
         }
     }
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (i < 0)
-    }
+    int name_len = get_str_len(winner.name
 
     printf("%i", )
     return;
+}
+
+int get_str_len(string name)
+{
+    int i = 0;
+    while(name[i] != '\0')
+    {
+        i++;
+    }
+    return i;
 }
