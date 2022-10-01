@@ -103,11 +103,20 @@ void print_winner(void)
         k -= 1;
     }
 
-    for (int i = 0; i < candidate_count; i++)
+    candidate winner = candidates[0];
+    for (int i = 0; i < candidate_count - 1; i++)
     {
-        if (i < )
+        if (winner.votes < candidates[i])
+        {
+            winner = candidates[i];
+        }
     }
 
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (i < 0)
+    }
 
+    printf("%i", )
     return;
 }
