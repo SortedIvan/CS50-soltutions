@@ -66,7 +66,16 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
+    // name represents the name of a person who is being voted for
+    // check whether this name actually exists within the candidates
+    // if yes, add +1 to their vote count
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(candidates[i].name, name) == 0)
+        {
+            candidates[i].votes += 1;
+        }
+    }
     return false;
 }
 
