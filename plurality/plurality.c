@@ -86,17 +86,19 @@ void print_winner(void)
 {
     // In order to find how many people have won, we are going to get the biggest vote count;
 
-    int biggest_vote_count;
+    int biggest_vote_count = candidates[0].votes;
 
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        if (candidates[i].votes > biggest_vote_count){
+            biggest_vote_count = candidates[i].votes;
+        }
     }
 
 
     for (int i = 0; i< candidate_count; i++)
     {
-        if (candidates[i].votes == biggest_vote)
+        if (candidates[i].votes == biggest_vote_count)
         {
             for (int z = 0; z < get_str_len(candidates[i].name); z++)
             {
