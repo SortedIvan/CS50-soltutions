@@ -84,34 +84,15 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // FIRST SORT THEM
-    bool sorted = false;
-    int k = candidate_count;
-    candidate temporary;
-    while (k > 1 && !sorted)
-    {
-        sorted = true;
-        for (int i = 0; i < candidate_count - 1; i++)
-        {
-            if (candidates[i+1].votes < candidates[i].votes)
-            {
-                sorted = false;
-                temporary = candidates[i];
-                candidates[i] = candidates[i+1];
-                candidates[i+1] = temporary;
-            }
-        }
-        k -= 1;
-    }
     // In order to find how many people have won, we are going to get the biggest vote count;
-    // Since the list is previously sorted, this is as simple as getting the last value
 
-    int biggest_vote = candidates[candidate_count].votes;
-    printf("%i GIHIHGIHGI", biggest_vote);
+    int biggest_vote_count;
 
-    for (int i = 0; i < candidate_count; i++){
-        printf("%i", candidates[i].votes);
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
     }
+
 
     for (int i = 0; i< candidate_count; i++)
     {
