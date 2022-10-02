@@ -102,28 +102,24 @@ void print_winner(void)
             }
         }
         k -= 1;
-    }
 
-    candidate winner = candidates[0];
-    for (int i = 0; i < candidate_count; i++)
+    // In order to find how many people have won, we are going to get the biggest vote count;
+    // Since the list is previously sorted, this is as simple as getting the last value
+
+    int biggest_vote = candidates[candidate_count].votes;
+
+    for (int i = 0; i< candidate_count; i++)
     {
-        if (winner.votes < candidates[i].votes)
+        if (candidates[i].votes == biggest_vote)
         {
-            winner = candidates[i];
+            for (int z = 0; z < get_str_len(candidates[i].name); z++)
+            {
+                printf("%c", candidates[i].name[z]);
+            }
+            printf(" is a winner with: %i votes. \n", candidates[i].votes);
         }
     }
 
-    int name_len = get_str_len(winner.name);
-
-    for (int i = 0; i < name_len; i++)
-    {
-        printf("%c", winner.name[i]);
-    }
-
-    printf("%candidate", winner);
-
-    printf(" is the winner with: %i votes", winner.votes);
-    return;
 }
 
 int get_str_len(string name)
