@@ -219,16 +219,13 @@ bool is_tie(int min)
     {
         if (!candidates[i].eliminated)
         {
-            if (candidates[i].votes > biggest_vote)
+            if (candidates[i].votes == min)
             {
-                biggest_vote = candidates[i].votes;
+                continue;
             }
+            return false;
         }
     }
-
-
-
-
     return false;
 }
 
