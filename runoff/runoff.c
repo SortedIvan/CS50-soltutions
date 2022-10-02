@@ -32,6 +32,7 @@ bool print_winner(void);
 int find_min(void);
 bool is_tie(int min);
 void eliminate(int min);
+int get_str_len(string name);
 
 int main(int argc, string argv[])
 {
@@ -163,12 +164,20 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
+
+    // Potentially could break because of (example) 51 / 2 == 25.5 (25 or 26?)
     int winning_amount = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
-
+        if (candidates[i].votes > winning_amount)
+        {
+            for (int k = 0; k < get_str_len(candidates[i].name); k++)
+            {
+                printf("%c", candidates[i].name[k]);
+                return true;
+            }
+        }
     }
-
     return false;
 }
 
@@ -191,4 +200,14 @@ void eliminate(int min)
 {
     // TODO
     return;
+}
+
+int get_str_len(string name)
+{
+    int k = 0;
+    while (name[k] != '\0')
+    {
+        k++;
+    }
+    return k;
 }
