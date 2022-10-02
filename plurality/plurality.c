@@ -113,12 +113,6 @@ void print_winner(void)
             {
                 printf("%c", candidates[i].name[z]);
             }
-
-            if (count_winners < 2)
-            {
-                printf(" is tied with: %i votes. \n", candidates[i].votes");
-                continue;
-            }
             printf(" is a winner with: %i votes. \n", candidates[i].votes);
         }
     }
