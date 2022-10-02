@@ -102,7 +102,7 @@ void print_winner(void)
             }
         }
         k -= 1;
-
+    }
     // In order to find how many people have won, we are going to get the biggest vote count;
     // Since the list is previously sorted, this is as simple as getting the last value
 
