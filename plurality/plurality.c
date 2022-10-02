@@ -95,8 +95,17 @@ void print_winner(void)
         }
     }
 
+    int count_winners = 0;
 
-    for (int i = 0; i< candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == biggest_vote_count)
+        {
+            count_winners++;
+        }
+    }
+
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == biggest_vote_count)
         {
