@@ -107,6 +107,11 @@ void print_winner(void)
     // Since the list is previously sorted, this is as simple as getting the last value
 
     int biggest_vote = candidates[candidate_count].votes;
+    printf("%i GIHIHGIHGI", biggest_vote);
+
+    for (int i = 0; i < candidate_count; i++){
+        printf("%i", candidates[i].votes);
+    }
 
     for (int i = 0; i< candidate_count; i++)
     {
