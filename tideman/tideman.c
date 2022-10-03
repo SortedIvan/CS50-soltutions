@@ -202,7 +202,10 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    for (int k = 0; k < pair_count - 1; k++)
+    {
+        for (int j)
+    }
     return;
 }
 
