@@ -176,7 +176,10 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    // TODO
+    for (int pair; pair < pair_count; pair++)
+    {
+        
+    }
     return;
 }
 
