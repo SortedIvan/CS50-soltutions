@@ -130,9 +130,12 @@ void record_preferences(int ranks[])
 
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
-            preferences[ranks[i]][ranks[j]] += 1; // Possible issue j over the amount it needs to be
+            if (i != j)
+            {
+                preferences[ranks[i]][ranks[j]] += 1;
+            }
         }
     }
     return;
@@ -141,7 +144,19 @@ void record_preferences(int ranks[])
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
-    // TODO
+    for (int pair = 0; pair < candidate_count; pair++)
+    {
+        for (int i = 0; i < candidate_count; i++)
+        {
+            for (int j = 0; j < candidate_count; j++)
+            {
+                if (i != j)
+                {
+                    
+                }
+            }
+        }
+    }
     return;
 }
 
