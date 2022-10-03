@@ -100,6 +100,19 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
+    // if name is a valid candidate name -> update ranks array that the voter
+    // has the candidate as their rank preference 0 is first preference, 1 is second, etc
+
+    // ranks[i] represents the user's i-th preference
+    // return true if rank is stored succesfully
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(candidates[i].name, name) == 0)
+        {
+            
+        }
+    }
     return false;
 }
 
