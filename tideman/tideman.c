@@ -123,6 +123,8 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     // TODO
+    //preferences
+    //preferences[i][j] represents number of voters who prefer candidate i over candidate j
     return;
 }
 
