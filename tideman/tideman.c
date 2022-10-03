@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -108,9 +109,11 @@ bool vote(int rank, string name, int ranks[])
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidates[i].name, name) == 0)
+        if (strcmp(candidates[i], name) == 0)
         {
-            
+            // i (0) == Alice so i-th index is alice
+            ranks[rank] = i; // Set the user's rank preference as the index of the person they are voting for
+            return true; // success
         }
     }
     return false;
