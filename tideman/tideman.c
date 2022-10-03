@@ -152,7 +152,7 @@ void add_pairs(void)
             {
                 if (i != j)
                 {
-                    
+                    if (preferences[i][j] > preferences[j][i])
                 }
             }
         }
