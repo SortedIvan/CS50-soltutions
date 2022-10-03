@@ -196,8 +196,6 @@ void sort_pairs(void)
         }
         k--;
     }
-
-
     return;
 }
 
