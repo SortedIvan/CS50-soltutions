@@ -176,10 +176,21 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    for (int pair; pair < pair_count; pair++)
+    // Bubble sort
+    int k = pair_count - 1;
+    pair temporary;
+    bool is_sorted = false;
+
+    while (k > 1 && !is_sorted)
     {
-        
+        is_sorted = true;
+        for (int pair = k; pair > 0; pair--)
+        {
+            if (pairs[pair] > pairs[pair - 1])
+        }
     }
+
+
     return;
 }
 
