@@ -186,8 +186,15 @@ void sort_pairs(void)
         is_sorted = true;
         for (int pair = k; pair > 0; pair--)
         {
-            if (pairs[pair] > pairs[pair - 1])
+            if (pairs[pair].winner > pairs[pair - 1].winner)
+            {
+                is_sorted = false;
+                temporary = pairs[pair - 1];
+                pairs[pair - 1] = pairs[pair];
+                pairs[pair] = temporary;
+            }
         }
+        k--;
     }
 
 
