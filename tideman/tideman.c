@@ -152,7 +152,20 @@ void add_pairs(void)
             {
                 if (i != j)
                 {
+                    if (preferences[i][j] == preferences[j][i])
+                    {
+                        continue;
+                    }
                     if (preferences[i][j] > preferences[j][i])
+                    {
+                        pairs[pair].winner = j;
+                        pairs[pair].loser = i;
+                        pair_count++;
+                        continue;
+                    }
+                    pairs[pair].winner = i;
+                    pairs[pair].loser = j;
+                    pair_count++;
                 }
             }
         }
