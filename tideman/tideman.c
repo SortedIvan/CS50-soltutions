@@ -125,18 +125,16 @@ void record_preferences(int ranks[])
     // TODO
     //preferences
     //preferences[i][j] represents number of voters who prefer candidate i over candidate j
+    //ranks[] holds a user's preferences
+    // preferences[ranks[i=0][j=1]]
 
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        for (int j = i + 1; j < candidate_count; j++)
         {
-            if (ranks[i] > ranks[j])
-            {
-                preferences[i][j] += 1;
-            }
+            preferences[ranks[i]][ranks[j]] += 1; // Possible issue j over the amount it needs to be
         }
     }
-
     return;
 }
 
