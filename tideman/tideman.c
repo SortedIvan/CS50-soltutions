@@ -100,17 +100,14 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-
-    for (int x = 0; x < candidate_count; x++){
-        for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(candidates[i], name))
         {
-            if (strcmp(candidates[i], name) == 0)
-            {
-                // valid name - candidate exists
-                ranks[x] = i; // Set the candidate index to given rank position
-                printf("name: %s is on rank: %i", candidates[i], x);
-                return true;
-            }
+            //candidate exists
+            ranks[rank] = i;
+            printf("Candidate: %s is on rank: %i", candidates[i], rank);
+            return true;
         }
     }
     return false;
