@@ -122,7 +122,7 @@ void record_preferences(int ranks[])
         {
             if (p1 != p2)
             {
-                preferences[ranks[p1]][ranks[p2]]++;
+                preferences[ranks[p1]][ranks[p2]] = preferences[ranks[p1]][ranks[p2]] + 1;
                 printf("- %i -", preferences[ranks[p1]][ranks[p2]]);
             }
         }
