@@ -85,26 +85,28 @@ int main(int argc, string argv[])
             }
         }
 
-        record_preferences(ranks);
+        //record_preferences(ranks);
 
         printf("\n");
     }
 
-    add_pairs();
-    sort_pairs();
-    lock_pairs();
-    print_winner();
+    //add_pairs();
+    //sort_pairs();
+    //lock_pairs();
+    //print_winner();
     return 0;
 }
 
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
+    printf("The ranking list is ");
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i], name) == 0)
         {
             ranks[rank] = i;
+            printf("candidate %s with index %i is on rank %i", candidates[i], i, rank);
             return true;
         }
     }
