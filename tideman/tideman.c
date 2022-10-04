@@ -199,7 +199,7 @@ void sort_pairs(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("%i", pairs[i].winner);
+        printf("%i is aihiahwih", pairs[i].winner);
     }
     return;
 }
