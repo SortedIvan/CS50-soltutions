@@ -133,7 +133,9 @@ void record_preferences(int ranks[])
 
     // p1=0, p2 = 1 - preferences[0][3]++
     // p1 = 0, p2 = 2 - preferences[0][1]++
-    // p1 = 1, p2 = 0
+    // p1 = 1, p2 = 0 preferences[3][0] !!!! NOT
+
+    //p1 = 0
 
     return;
 }
