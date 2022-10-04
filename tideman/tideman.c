@@ -100,17 +100,12 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    for (int r = 0; r < candidate_count; r++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int i = 0; i < candidate_count; i++)
+        if (strcmp(candidates[i], name) == 0)
         {
-            if (strcmp(candidates[i], name) == 0)
-            {
-                //candidate exists
-                ranks[r] = rank;
-                printf("Candidate: %s is on rank: %i\n", candidates[i], rank);
-                return true;
-            }
+            ranks[rank] = i;
+            return true;
         }
     }
     return false;
@@ -128,6 +123,7 @@ void record_preferences(int ranks[])
             if (p1 != p2)
             {
                 preferences[ranks[p1]][ranks[p2]]++;
+                printf(" %i ", preferences[ranks[p1]][ranks[p2]]);
             }
         }
     }
