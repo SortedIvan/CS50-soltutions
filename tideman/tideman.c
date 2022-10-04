@@ -178,15 +178,27 @@ void sort_pairs(void)
 
     while (k > 1 && !sorted)
     {
+        sorted = true;
         for (int i = k; i > 0; i++)
         {
-            if (pair[i].winner > pair[i - 1].winner)
+            if (pairs[i].winner > pairs[i - 1].winner)
             {
-                
+                sorted = false;
+
+                // swapping
+
+                temporary = pairs[i - 1];
+                pairs[i - 1] = pairs[i];
+                pairs[i] = temporary;
             }
         }
     }
 
+
+    for (int i = 0; i < pair_count; i++)
+    {
+        printf(" %i%i \n", pairs[i].winner, pairs[i].loser);
+    }
 
     return;
 }
