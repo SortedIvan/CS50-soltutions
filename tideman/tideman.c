@@ -120,6 +120,8 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     // TODO
+    // ranks[i] = ith preference (Alice, Bob, Charlie, aka if ranks[0] = 2, that means that Charlie is the first preference)
+    
     return;
 }
 
