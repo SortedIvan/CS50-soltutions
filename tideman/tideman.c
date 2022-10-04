@@ -196,16 +196,21 @@ void sort_pairs(void)
         }
         k--;
     }
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        printf("%i", pairs[i].winner);
+    }
     return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    for (int k = 0; k < pair_count - 1; k++)
-    {
-        for (int j)
-    }
+    // for (int k = 0; k < pair_count - 1; k++)
+    // {
+    //     for (int j)
+    // }
     return;
 }
 
