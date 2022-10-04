@@ -105,7 +105,7 @@ bool vote(int rank, string name, int ranks[])
         if (strcmp(candidates[i], name))
         {
             //candidate exists
-            ranks[rank] = i;
+            ranks[i] = rank;
             printf("Candidate: %s is on rank: %i\n", candidates[i], rank);
             return true;
         }
