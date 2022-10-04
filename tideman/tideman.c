@@ -129,7 +129,7 @@ void record_preferences(int ranks[])
             {
                 if (i != j)
                 {
-                    
+                    ranks[rank] 
                 }
             }
         }
