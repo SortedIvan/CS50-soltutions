@@ -106,7 +106,7 @@ bool vote(int rank, string name, int ranks[])
         {
             //candidate exists
             ranks[rank] = i;
-            printf("Candidate: %s is on rank: %i", candidates[i], rank);
+            printf("Candidate: %s is on rank: %i\n", candidates[i], rank);
             return true;
         }
     }
