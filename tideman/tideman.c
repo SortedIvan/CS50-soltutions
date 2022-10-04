@@ -116,18 +116,20 @@ void record_preferences(int ranks[])
 {
     // TODO
     // ranks[i] = ith preference (Alice, Bob, Charlie, aka if ranks[0] = 2, that means that Charlie is the first preference)
-    for (int p1 = 0; p1 < candidate_count; p1++)
-    {
-        for (int p2 = 0; p2 < candidate_count; p2++)
+    for (int rank = 0; rank < candidate_count - 1; rank++){
+        for (int p1 = 0; p1 < candidate_count; p1++)
         {
-            if (p1 != p2)
+            for (int p2 = 0; p2 < candidate_count; p2++)
             {
-                preferences[ranks[p1]][ranks[p2]]++;
-                printf("- %i %i -\n", ranks[p1], ranks[p2]);
-                printf("- %i %i -", p1, p2);
+                if (p1 != p2)
+                {
+                    preferences[ranks[rank]][ranks[rank + 1]]++;
+                    printf("- %i -", preferences[ranks[p1]][ranks[p2]]);
+                }
             }
         }
     }
+
     return;
 }
 
