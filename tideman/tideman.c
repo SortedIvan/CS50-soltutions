@@ -118,7 +118,7 @@ void record_preferences(int ranks[])
     // ranks[i] = ith preference (Alice, Bob, Charlie, aka if ranks[0] = 2, that means that Charlie is the first preference)
     for (int p1 = 0; p1 < candidate_count; p1++)
     {
-        for (int p2 = p1 + 1; p2 < candidate_count - 1; p2++)
+        for (int p2 = p1 + 1; p2 < candidate_count; p2++)
         {
             if (p1 != p2)
             {
