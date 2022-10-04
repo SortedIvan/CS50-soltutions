@@ -186,6 +186,7 @@ void sort_pairs(void)
         is_sorted = true;
         for (int pair = k; pair > 0; pair--)
         {
+            printf("WTF");
             if (pairs[pair].winner > pairs[pair - 1].winner)
             {
                 is_sorted = false;
