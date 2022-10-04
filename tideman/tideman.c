@@ -108,14 +108,10 @@ bool vote(int rank, string name, int ranks[])
             {
                 // valid name - candidate exists
                 ranks[x] = i; // Set the candidate index to given rank position
+                printf("name: %s is on rank: %i", candidates[i], x);
                 return true;
             }
         }
-    }
-
-    for (int k = 0; k < candidate_count; k++)
-    {
-        printf("%i",ranks[k]);
     }
     return false;
 }
