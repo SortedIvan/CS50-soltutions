@@ -140,20 +140,24 @@ void add_pairs(void)
     // pair - int winner int loser
     // preferences[0][1] > preferences[1][0] then 0 wins
     // otherwise 1 wins
-    for (int i = 0; i < candidate_count; i++)
+    for (int pair = 0; pair < ____; pair++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        for (int i = 0; i < candidate_count; i++)
         {
-            if (i != j)
+            for (int j = 0; j < candidate_count; j++)
             {
-                if (preferences[i][j] > preferences[j][i])
+                if (i != j)
                 {
+                    if (preferences[i][j] > preferences[j][i])
+                    {
 
+                    }
                 }
-            }
 
+            }
         }
     }
+
     return;
 }
 
