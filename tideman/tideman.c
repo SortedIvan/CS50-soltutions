@@ -174,8 +174,19 @@ void sort_pairs(void)
 {
     pair temporary;
     int k = pair_count;
+    bool sorted = false;
 
-    for (int i )
+    while (k > 1 && !sorted)
+    {
+        for (int i = k; i > 0; i++)
+        {
+            if (pair[i].winner > pair[i - 1].winner)
+            {
+                
+            }
+        }
+    }
+
 
     return;
 }
