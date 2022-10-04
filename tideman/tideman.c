@@ -127,7 +127,13 @@ void record_preferences(int ranks[])
             }
         }
     }
+    // 0: Alice(0)
+    // 1: Charlie(3)
+    // 2: Bob (1)
 
+    // p1=0, p2 = 1 - preferences[0][3]++
+    // p1 = 0, p2 = 2 - preferences[0][1]++
+    // p1 = 1, p2 = 0
 
     return;
 }
