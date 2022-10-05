@@ -179,7 +179,7 @@ void sort_pairs(void)
             if (pairs[biggest].winner < pairs[i].winner)
             {
                 biggest = i;
-                printf("biggest is: %i at indx: %i \n", pairs[biggest].winner, biggest);
+                //printf("biggest is: %i at indx: %i \n", pairs[biggest].winner, biggest);
             }
         }
 
@@ -189,7 +189,10 @@ void sort_pairs(void)
         step++;
     }
 
-
+    for (int i = 0; i < pair_count - 1; i++)
+    {
+        printf("%i\n", pairs[i].winner);
+    }
     return;
 }
 
