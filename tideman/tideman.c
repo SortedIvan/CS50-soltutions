@@ -91,9 +91,9 @@ int main(int argc, string argv[])
     }
 
     //add_pairs();
-    //sort_pairs();
-    //lock_pairs();
-    //print_winner();
+    sort_pairs();
+    lock_pairs();
+    print_winner();
     return 0;
 }
 
@@ -123,20 +123,20 @@ void record_preferences(int ranks[])
             if (p1 != p2)
             {
                 preferences[ranks[p1]][ranks[p2]]++;
-                printf("- %i -", preferences[ranks[p1]][ranks[p2]]);
+                //printf("- %i -", preferences[ranks[p1]][ranks[p2]]);
             }
         }
     }
-    printf("\n");
+    // printf("\n");
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            printf(" %i ", preferences[i][j]);
-        }
-        printf("\n");
-    }
+    // for (int i = 0; i < candidate_count; i++)
+    // {
+    //     for (int j = 0; j < candidate_count; j++)
+    //     {
+    //         printf(" %i ", preferences[i][j]);
+    //     }
+    //     printf("\n");
+    // }
     return;
 }
 
