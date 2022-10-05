@@ -90,7 +90,7 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    //add_pairs();
+    add_pairs();
     sort_pairs();
     lock_pairs();
     print_winner();
@@ -154,11 +154,25 @@ void add_pairs(void)
                 {
                     temp.winner = i;
                     temp.loser = j;
-                    pairs[]
+                    pairs[i] = temp;
+                    pair_count++;
+                }
+                else if (preferences[i][j] < preferences[j][i])
+                {
+                    temp.winner = j;
+                    temp.loser = i;
+                    pairs[i] = temp;
+                    pair_count++;
                 }
             }
         }
     }
+
+    for (int i = 0; i < pair_count; i++)
+    {
+        printf("pair at: %i is %i over %i \n", i, pairs[i].winner, pairs[i].loser);
+    }
+
     return;
 }
 
