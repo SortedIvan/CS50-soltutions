@@ -169,9 +169,20 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     int step = 0;
-    while (step < pairs_count - 1)
+    int biggest = 0;
+    while (step < pair_count - 1)
     {
-        
+        biggest = step;
+        for (int i = step + 1; i < pair_count; i++)
+        {
+            if (pairs[biggest].winner < pairs[i].winner)
+            {
+                biggest = i;
+                printf("biggest is: %i at indx: %i \n", pairs[biggest].winner, biggest);
+            }
+        }
+
+        step++;
     }
 
 
