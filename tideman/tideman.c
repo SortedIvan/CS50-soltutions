@@ -177,11 +177,11 @@ void sort_pairs(void)
         {
             if (pairs[biggest].winner < pairs[i].winner)
             {
-                biggest = pairs[i];
+                biggest = i;
             }
         }
 
-
+        temporary = pairs[]
     }
 
     return;
