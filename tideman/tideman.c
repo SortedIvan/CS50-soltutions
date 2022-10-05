@@ -158,21 +158,14 @@ void add_pairs(void)
                     pairs[pair_count] = temp;
                     pair_count++;
                 }
-                else if (preferences[i][j] < preferences[j][i])
-                {
-                    temp.winner = j;
-                    temp.loser = i;
-                    pairs[pair_count] = temp;
-                    pair_count++;
-                }
             }
         }
     }
 
-    for (int i = 0; i < pair_count; i++)
-    {
-        printf("pair at: %i is %i over %i \n", i, pairs[i].winner, pairs[i].loser);
-    }
+    // for (int i = 0; i < pair_count; i++)
+    // {
+    //     printf("pair at: %i is %i over %i \n", i, pairs[i].winner, pairs[i].loser);
+    // }
 
     return;
 }
