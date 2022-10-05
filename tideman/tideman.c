@@ -91,7 +91,7 @@ int main(int argc, string argv[])
     }
 
     add_pairs();
-    //sort_pairs();
+    sort_pairs();
     //lock_pairs();
     //print_winner();
     return 0;
@@ -168,20 +168,26 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    int biggest = pair_count - 1;
+    int step = 0;
+    int biggest = 0;
     pair temporary;
-
-    for (int step = pair_count - 1; step > 0; step--)
+    while(step < pair_count - 1)
     {
-        for (int i = step; i > 0; i--)
+        printf("hi");
+        biggest = step;
+        for (int i = step; i < pair_count; i++)
         {
-            if (pairs[biggest].winner < pairs[i].winner)
+            if (pairs[i].winner > pairs[biggest].winner)
             {
                 biggest = i;
+                printf("biggest is %i at index: %i \n", pairs[i].winner, i);
             }
         }
 
-        temporary = pairs[]
+        temporary = pairs[step];
+        pairs[step] = pairs[biggest];
+        pairs[biggest] = temporary;
+        step++;
     }
 
     return;
