@@ -177,7 +177,7 @@ void sort_pairs(void)
     {
         printf("%i\n", pairs[i].winner);
     }
-    while (step < pair_count - 1)
+    while (step < pair_count)
     {
         biggest = step;
         for (int i = step; i < pair_count; i++)
