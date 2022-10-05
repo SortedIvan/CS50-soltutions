@@ -169,26 +169,11 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     int step = 0;
-    int biggest = 0;
-    pair temporary;
-    while(step < pair_count - 1)
+    while (step < pairs_count - 1)
     {
-        printf("hi");
-        biggest = step;
-        for (int i = step; i < pair_count; i++)
-        {
-            if (pairs[i].winner > pairs[biggest].winner)
-            {
-                biggest = i;
-                printf("biggest is %i at index: %i \n", pairs[i].winner, i);
-            }
-        }
-
-        temporary = pairs[step];
-        pairs[step] = pairs[biggest];
-        pairs[biggest] = temporary;
-        step++;
+        
     }
+
 
     return;
 }
