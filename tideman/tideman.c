@@ -127,6 +127,16 @@ void record_preferences(int ranks[])
             }
         }
     }
+    printf("\n");
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            printf(" %i ", preferences[i][j]);
+        }
+        printf("\n");
+    }
     // 0: Alice(0)
     // 1: Charlie(3)
     // 2: Bob (1)
