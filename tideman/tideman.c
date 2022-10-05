@@ -176,7 +176,7 @@ void sort_pairs(void)
     while (step < pair_count - 1)
     {
         biggest = step;
-        for (int i = step + 1; i < pair_count; i++)
+        for (int i = step; i < pair_count; i++)
         {
             if (pairs[biggest].winner < pairs[i].winner)
             {
