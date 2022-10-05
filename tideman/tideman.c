@@ -153,12 +153,12 @@ void add_pairs(void)
                 pairs[pair_count].loser = j;
                 pair_count ++;
             }
-            // else if(preferences[i][j] < preferences[j][i])
-            // {
-            //     pairs[pair_count].winner = j;
-            //     pairs[pair_count].loser = i;
-            //     pair_count ++;
-            // }
+            else if(preferences[i][j] < preferences[j][i])
+            {
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
+                pair_count ++;
+            }
         }
     }
     // TODO
@@ -169,6 +169,7 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     int step = 0;
+    pair temp;
     int biggest = 0;
     while (step < pair_count - 1)
     {
@@ -182,6 +183,9 @@ void sort_pairs(void)
             }
         }
 
+        temp = pairs[step];
+        pairs[step] = pairs[biggest];
+        pairs[biggest] = temp;
         step++;
     }
 
