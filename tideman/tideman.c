@@ -140,7 +140,7 @@ void record_preferences(int ranks[])
     return;
 }
 
-
+object of type 'coroutine' has no len()
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
