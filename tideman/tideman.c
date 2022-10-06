@@ -140,7 +140,6 @@ void record_preferences(int ranks[])
     return;
 }
 
-object of type 'coroutine' has no len()
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
@@ -174,13 +173,21 @@ void sort_pairs(void)
 
     int index_of_biggest = 0;
 
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int k = pair_count - 1; k > 0; k--)
     {
-        if (pairs[i].winner > pairs[index_of_biggest])
+        index_of_biggest = k;
+        for (int i = 0; i < pair_count - 1; i++)
         {
-            index_of_biggest = i;
+            if (pairs[i].winner > pairs[index_of_biggest].winner)
+            {
+                index_of_biggest = i;
+            }
         }
+
+        pair temporary = 
     }
+
+
 
 
 
