@@ -188,6 +188,11 @@ void sort_pairs(void)
         pairs[index_of_biggest] = pairs[k];
         pairs[k] = temporary;
     }
+
+    for (int i = 0; i < pair_count - 1; i++)
+    {
+        printf("pair at: %i has value: %i", i, pairs[i].winner);
+    }
     return;
 }
 
