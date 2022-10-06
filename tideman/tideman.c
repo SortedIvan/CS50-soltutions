@@ -176,7 +176,7 @@ void sort_pairs(void)
     for (int k = pair_count - 1; k > 0; k--)
     {
         index_of_biggest = k;
-        for (int i = 0; i < pair_count - 1; i++)
+        for (int i = k; i > 0; i--)
         {
             if (pairs[i].winner > pairs[index_of_biggest].winner)
             {
@@ -184,13 +184,10 @@ void sort_pairs(void)
             }
         }
 
-        pair temporary = 
+        pair temporary = pairs[index_of_biggest];
+        pairs[index_of_biggest] = pairs[k];
+        pairs[k] = temporary;
     }
-
-
-
-
-
     return;
 }
 
