@@ -170,35 +170,7 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    int step = 0;
-    pair temp;
-    int biggest = 0;
-    for (int i = 0; i < pair_count; i++)
-    {
-        printf("%i\n", pairs[i].winner);
-    }
-    while (step < pair_count)
-    {
-        biggest = step;
-        for (int i = step; i < pair_count; i++)
-        {
-            if (pairs[biggest].winner < pairs[i].winner)
-            {
-                biggest = i;
-                //printf("biggest is: %i at indx: %i \n", pairs[biggest].winner, biggest);
-            }
-        }
 
-        temp = pairs[step];
-        pairs[step] = pairs[biggest];
-        pairs[biggest] = temp;
-        step++;
-    }
-
-    for (int i = 0; i < pair_count - 1; i++)
-    {
-        printf("%i\n", pairs[i].winner);
-    }
     return;
 }
 
