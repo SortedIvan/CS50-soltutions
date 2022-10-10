@@ -189,7 +189,10 @@ void sort_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
-        printf("pair at: %i has value: %i", i, pairs[i].winner);
+        for (int k = 0; k < pair_count; k++)
+        {
+            printf("pair at: %i has value: %i", i, preferences[pairs[i].winner][pairs[k].winner]);
+        }
     }
     return;
 }
