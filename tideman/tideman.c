@@ -162,11 +162,6 @@ void add_pairs(void) // WORKS
 
         }
     }
-
-    for (int i = 0; i < pair_count; i++)
-    {
-        printf("Pair at: %i has winner: %i and loser: %i", i, pairs[i].winner, pairs[i].loser);
-    }
     // TODO
     return;
 }
