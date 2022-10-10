@@ -178,6 +178,7 @@ void sort_pairs(void)
 
             if (preferences[pairs[biggest].winner][pairs[k].loser] < preferences[pairs[k].loser][pairs[biggest].winner]){
                 biggest = k;
+                
             }
         }
         // swap
