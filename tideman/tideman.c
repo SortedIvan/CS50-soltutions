@@ -112,7 +112,7 @@ bool vote(int rank, string name, int ranks[])
 }
 
 // Update preferences given one voter's ranks
-void record_preferences(int ranks[])
+void record_preferences(int ranks[]) // WORKS
 {
     // TODO
     // ranks[i] = ith preference (Alice, Bob, Charlie, aka if ranks[0] = 2, that means that Charlie is the first preference)
