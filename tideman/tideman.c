@@ -187,7 +187,7 @@ void sort_pairs(void)
         pairs[biggest] = last_biggest;
     }
 
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         printf("pair at: %i has value: %i", i, pairs[i].winner);
     }
