@@ -174,7 +174,7 @@ void sort_pairs(void)
 
         for (int k = i + 1; k < pair_count; k++){
 
-            if (preferences[pairs[biggest].winner][pairs[k].loser] < preferences[pairs[k].loser][pairs[biggest].winner]){
+            if (preferences[pairs[biggest].winner][pairs[k].loser] > preferences[pairs[k].loser][pairs[biggest].winner]){
                 biggest = k;
             }
         }
