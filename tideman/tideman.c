@@ -189,6 +189,11 @@ void sort_pairs(void)
         pairs[i] = pairs[biggest];
         pairs[biggest] = last_biggest;
     }
+
+    for (int i = 0; i < pair_count - 1; i++){
+        printf("Pair at: %i has winner: %i and loser: %i \n", i, pairs[i].winner, pairs[i].loser);
+    }
+
     return;
 }
 
